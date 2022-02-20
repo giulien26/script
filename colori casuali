@@ -1,0 +1,16 @@
+(function () {
+    // funzione che genera un numero casuale tra due estremi
+    function randomInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    this.clickDownOnEntity = function (myID) {
+        Entities.editEntity(myID, {
+            color: {
+                red: randomInteger(128, 255),
+                green: randomInteger(128, 255),
+                blue: randomInteger(128, 255)
+            }
+        });
+    };
+});
